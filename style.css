@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        to bottom,
+        #87CEEB 0%,
+        #87CEEB 70%,
+        #7CFC00 70%,
+        #7CFC00 100%
+    );
+
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    color: #c2185b;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 22px;
+}
+
+.jardin {
+    margin-top: 120px;
+}
+
+button {
+    font-size: 100px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin: 20px;
+
+    animation: crecer 2s ease forwards;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.cesped {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+}
+
+@keyframes crecer {
+
+    from {
+        transform: translateY(300px) scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+}
+
+.flor1 {
+    animation-delay: 0s;
+}
+
+.flor2 {
+    animation-delay: 1s;
+}
+
+.flor3 {
+    animation-delay: 2s;
+}
+
+.sol {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 80px;
+
+    animation: girar 20s linear infinite;
+}
+
+@keyframes girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.nube {
+    position: absolute;
+    font-size: 70px;
+}
+
+.nube1 {
+    top: 80px;
+    left: -150px;
+
+    animation: moverNube 20s linear infinite;
+}
+
+.nube2 {
+    top: 160px;
+    left: -300px;
+
+    animation: moverNube 30s linear infinite;
+}
+
+@keyframes moverNube {
+
+    from {
+        left: -300px;
+    }
+
+    to {
+        left: 110%;
+    }
+
+}
+
+.tarjeta {
+
+    display: none;
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+
+    width: 420px;
+
+    z-index: 1000;
+}
+
+.tarjeta h2 {
+    color: #c2185b;
+}
+
+.cerrar {
+
+    font-size: 18px;
+
+    padding: 10px 20px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.mariposa {
+    position: absolute;
+    font-size: 50px;
+
+    left: -100px;
+    top: 250px;
+
+    animation: volar 12s linear infinite;
+}
+
+@keyframes volar {
+
+    0% {
+        left: -100px;
+        top: 250px;
+    }
+
+    25% {
+        top: 180px;
+    }
+
+    50% {
+        top: 280px;
+    }
+
+    75% {
+        top: 200px;
+    }
+
+    100% {
+        left: 110%;
+        top: 250px;
+    }
+
+}
+
+.florEspecial {
+    font-size: 130px;
+}
+
+#textoTarjeta {
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.petalo {
+    position: absolute;
+    font-size: 35px;
+
+    top: -50px;
+
+    animation: caer 10s linear infinite;
+}
+
+.petalo1 {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.petalo2 {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.petalo3 {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.petalo4 {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.petalo5 {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes caer {
+
+    0% {
+        top: -50px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 110%;
+        transform: rotate(360deg);
+    }
+
+}
